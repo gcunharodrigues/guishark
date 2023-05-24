@@ -1,0 +1,53 @@
+api_hash.txt
+api_id.txt
+bot_token.txt
+chat_id_test.txt
+chat_id.txt
+merged_events.json
+ProfitDLL.zip
+news_run_bot.bat
+events.pickle
+run_bot.bat
+session_name.session
+session.session
+test.py
+test2.py
+trade_id.txt
+trade_info_wdo.txt
+trade_info_win.txt
+trade_info.txt
+wdo_run_bot.bat
+win_run_bot.bat
+.vscode/launch.json
+__pycache__/guishark_msg.cpython-39.pyc
+__pycache__/guishark_msg.cpython-310.pyc
+__pycache__/mensagem_trade.cpython-39.pyc
+__pycache__/trade_idea_v1.cpython-39.pyc
+__pycache__/trade_idea_v2.cpython-39.pyc
+ProfitDLL/DLL e Executável/DLL_MARKET.exe
+ProfitDLL/DLL e Executável/DLL_ROTEAMENTO_MAIN.exe
+ProfitDLL/DLL e Executável/InfoServerAddr.dat
+ProfitDLL/DLL e Executável/PostMessageError.log
+ProfitDLL/DLL e Executável/ProfitDLL.dll
+ProfitDLL/DLL e Executável/ServerAddr.dat
+ProfitDLL/DLL e Executável/Logs/LogDesktop_2022_11_11_B.log
+ProfitDLL/DLL e Executável/Logs/LogDesktop_2022_11_11.log
+ProfitDLL/DLL e Executável/Logs/LogMessages_2022_11_11_B.log
+ProfitDLL/DLL e Executável/Logs/LogMessages_2022_11_11.log
+ProfitDLL/Exemplo C#/ProfitDLL.csproj
+ProfitDLL/Exemplo C#/Program.cs
+ProfitDLL/Exemplo C++/lista_de_ativos.txt
+ProfitDLL/Exemplo C++/main.cpp
+ProfitDLL/Exemplo C++/profit.h
+ProfitDLL/Exemplo Delphi/MainMarketTestU.dfm
+ProfitDLL/Exemplo Delphi/MainMarketTestU.pas
+ProfitDLL/Exemplo Delphi/MainTestU.dfm
+ProfitDLL/Exemplo Delphi/MainTestU.pas
+ProfitDLL/Exemplo Python/profitDLL.py
+ProfitDLL/Interface/ConnectorInterfaceMarketU.pas
+ProfitDLL/Interface/ConnectorInterfaceU.pas
+ProfitDLL/Interface/ConnectorUtilsU.pas
+ProfitDLL/Manual/change.log
+ProfitDLL/Manual/Manual de Uso.odt
+ProfitDLL/Manual/Manual de Uso.pdf
+chat_id2.txt
