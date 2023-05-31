@@ -6,7 +6,7 @@ import guishark_msg
 
 # Time of last news
 first_news_time = '6h55'
-last_news_time = '7h05'
+last_news_time = '7h07'
 first_news_time_datetime = datetime.datetime.strptime(first_news_time, '%Hh%M')
 last_news_time_datetime = datetime.datetime.strptime(last_news_time, '%Hh%M')
 
