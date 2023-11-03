@@ -11,7 +11,8 @@ first_news_time_datetime = datetime.datetime.strptime(first_news_time, '%Hh%M')
 last_news_time_datetime = datetime.datetime.strptime(last_news_time, '%Hh%M')
 
 # Parse the RSS feed
-feed = feedparser.parse("https://www.infomoney.com.br/tudo-sobre/ao-vivo/feed/")
+feed = feedparser.parse(
+    "https://www.infomoney.com.br/tudo-sobre/ao-vivo/feed/")
 
 # Get today date
 today = datetime.date.today()
@@ -37,34 +38,34 @@ content = BeautifulSoup(entry_content, "html.parser")
 list_titles = [title for title in content.find('div')]
 list_titles = [x for x in list_titles if x != ' ']
 
-item_list =[]
+item_list = []
 for item in list_titles:
-    each_item_list=[]
+    each_item_list = []
     item_update = item.find('span').get_text().split()
     item_time = item_update[1]
     item_time_datetime = datetime.datetime.strptime(item_time, '%Hh%M')
     each_item_list.append(item_time)
-    
+
     if item_time_datetime < last_news_time_datetime and \
-        item_time_datetime >= first_news_time_datetime:
+            item_time_datetime >= first_news_time_datetime:
         item_title = '*' + item.find('h2').get_text() + '*'
         each_item_list.append(item_title)
-          
+
         item_text = item.find('p')
         if item_text:
-            item_text = item_text.get_text() 
+            item_text = item_text.get_text()
             each_item_list.append(item_text)
-        
-        each_item_list_list=[]    
+
+        each_item_list_list = []
         item_list_list = item.find_all('li')
         for list_html in item_list_list:
             if list_html:
                 list_html = list_html.get_text()
                 each_item_list_list.append(list_html)
-        each_item_list.append(each_item_list_list)    
+        each_item_list.append(each_item_list_list)
         item_list.append(each_item_list)
 
-news_message_list = [] 
+news_message_list = []
 for item in item_list:
     item = [x for x in item if x]
     news_message_list.append(item[1:])
@@ -74,15 +75,16 @@ for news_message in news_message_list:
     for message in news_message:
         index_2 = news_message.index(message)
         if isinstance(message, list):
-            news_message_list[index_1][index_2] = '\n'.join(['\t- ' + x for x in message])
+            news_message_list[index_1][index_2] = '\n'.join(
+                ['\t- ' + x for x in message])
 
 merged_news_list = []
 for news_message in reversed(news_message_list):
     merged_news = '\n'.join(news_message)
     merged_news_list.append(merged_news)
 
-merged_news_list.insert(0, 'Panorama Diário\n') 
-    
+merged_news_list.insert(0, 'Panorama Diário\n')
+
 # tosend_merged_news_list = 'Panorama Diário\n\n' + '\n\n'.join(merged_news_list)
 
 with open('bot_token.txt') as f:
